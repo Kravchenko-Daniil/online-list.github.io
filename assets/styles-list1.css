@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+
+.list, .list-md, .markdown-body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.markdown-body ol {
+    list-style-type: none;
+    counter-reset: num;
+    /* padding: 0 !important; */
+    padding-left: 100px;
+}
+
+.markdown-body ol li {
+    border: 2px solid none;
+    counter-increment: num;
+    color: #f2fcfe;
+    letter-spacing: 1px;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4) no-repeat; 
+    background-attachment: fixed;
+    padding: 6px 20px;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+}
+
+.markdown-body li:last-child::before {
+    content: counter(num);
+    color: white;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 24px;
+    animation: 10s countanim;
+}
+
+@keyframes countanim {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .markdown-body ol {
+        padding-left: 20px !important;
+        padding: 20px 0;
+    }
+
+    .markdown-body ol li {
+        padding: 3px 10px;
+        font-size: 12px;
+        margin-right: 1px;
+        font-weight: 500;
+    }
+
+    .markdown-body li:last-child::before {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+    }
+}

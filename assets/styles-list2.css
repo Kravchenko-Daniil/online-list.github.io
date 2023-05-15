@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+
+.list, .list-md, .markdown-body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.anim {
+    opacity: 0;
+}
+
+.markdown-body ol {
+    background-color: black;
+    padding-right: 50px;
+    padding-left: 50px !important;
+    padding-top: 90px;
+    padding-bottom: 20px;
+    list-style-type: none;
+    counter-reset: num;
+    height: 570px;
+    border-radius: 20px;
+    z-index: 2;
+    background: linear-gradient(#ED213A, #93291E);
+    overflow: auto;
+}
+
+.markdown-body ol::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+.markdown-body ol::before {
+    content: 'Top-20';
+    position: absolute;
+    color: white;
+    left: 0px;
+    top: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 26px;
+    width: 100%;
+    height: 60px;
+    background: #141E30;
+    font-family: 'Bungee Shade', cursive;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.markdown-body ol li {
+    counter-increment: num;
+    height: 50px;
+    background: linear-gradient(to bottom right, #3462edd3, #2949ffe2);
+    padding: 26px 40px;
+    text-align: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #EAEAEA;
+    position: relative;
+    z-index: 1;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.markdown-body ol li::before {
+    content: counter(num);
+    position: absolute;
+    left: 4%;
+    opacity: 0.8;
+    color:black;
+    font-family: 'Bungee Shade', cursive;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.markdown-body ol li::after {
+    content: counter(num);
+    position: absolute;
+    right: 4%;
+    opacity: 0.8;
+    color:black;
+    font-family: 'Bungee Shade', cursive;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+@media screen and (max-width: 980px) {
+    .markdown-body ol {
+        width: 80%;
+        padding-right: 25px;
+        padding-left: 25px !important;
+        padding-top: 80px;
+        padding-bottom: 10px;
+    }
+    
+    .markdown-body ol::before {
+        width: 80%;
+        left: 10%;
+        top: 0px;
+    }
+
+    .markdown-body ol li {
+        margin-bottom: 8px;
+        font-size: 16px;
+        /* padding: 13px 20px; */
+    }
+
+    .markdown-body ol li::before {
+        top: 37%;
+    }
+
+    .markdown-body ol li::after {
+        top: 37%;
+    }
+}

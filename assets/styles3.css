@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+html, body, .container {
+    height: 100%;
+    width: 100%;
+}
+
+#load-screen {
+    background: linear-gradient(#414345, #232526);
+}
+
+.load_hiding {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1001;
+    display: block;
+    clip-path: polygon(1 0, 100% 0, 100% 100%, 1 100%);
+    border-bottom-left-radius: 99% 10%;
+    border-bottom-right-radius: 99% 10%;
+    animation: openpage 2s;
+}
+
+@keyframes openpage {
+    from {
+        top: -10%;
+    }
+    to{
+        bottom: 120%;
+    }
+}
+
+.loaded {
+    opacity: 0;
+    display: none;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+.container {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+}
+
+.container::-webkit-scrollbar {
+    width: 0;
+    height: 0   ;
+}
+
+.header {
+    position: fixed;
+    top: 10px;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    font-size: 13px;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    background: #7303c0;
+    border-radius: 20px;
+}
+
+.header ul li {
+    margin: 0 1em;
+    padding: 1em;
+    color:red;
+}
+  
+.header ul li a {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgba(244, 244, 244, 1)
+}
+
+.header ul li a::after {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    content:'';
+    width: 0;
+    height: 2.5px;
+    transition: all 0.2s linear;
+}
+
+.header ul li a:hover::after {
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+.header{
+    animation: showTopHeader 1.5s;
+}
+
+  
+
+.section {
+    /* scroll-snap-align: start end; */
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#main-page {
+    background: linear-gradient(to bottom, #373B44, #4A00E0, #1565C0);
+    padding-bottom: 20px;
+}
+
+#main-page h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 160px;
+    font-weight: 900;
+    padding: 0.5em 1em;
+    background: url('anime.png') no-repeat center/cover fixed;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    pointer-events: none;
+    user-select: none;
+    position: relative;
+    animation: showTopH1 1s;
+}
+
+
+@keyframes showTopHeader {
+
+    from {
+        top:-25%;
+    }
+    to {
+        top:10px;
+    }
+
+}
+
+@keyframes showTopH1 {
+    from {
+        bottom: -35%;
+    }
+    to {
+        bottom: 0;
+    }
+} 
+
+
+@media screen and (max-width: 980px) {
+    .header {
+        top: 35px;
+        animation: showTopHeader980 1.5s;
+    }
+
+    #main-page h1 {
+        font-size: 60px;
+
+    }
+    
+    @keyframes showTopHeader980 {
+    
+        from {
+            top:-25%;
+        }
+        to {
+            top:35px;
+        }
+    }
+
+    #watched-list {
+        height: auto;
+    }
+}
+
+
+#watched-list {
+    background: linear-gradient(to bottom, #1565C0, #4286f4, #4A00E0);
+}
+
+.list, .list-md, .markdown-body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.list .animation {
+    animation: olanim 3s 1;
+} 
+
+@keyframes olanim {
+    from {
+        left:  10%;
+    }
+    to {
+        left: 0%;
+        
+    }
+}
+
+#top-list {
+    background: linear-gradient(to bottom, #4A00E0, #6E48AA, #8E2DE2)
+}
+
+.list-top .animation {
+    animation: topanim 1.5s 1;
+}
+
+@keyframes topanim {
+    0% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}

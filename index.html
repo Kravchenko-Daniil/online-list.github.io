@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My anime</title>
+    
+    <link rel="stylesheet" href="assets/styles3.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+</head>
+<body>
+    <!-- <div class="load">
+        <img src="assets/narutomaki.png"/>
+    </div> -->
+    <div class="container">
+        <div class="header">
+            <ul>
+                <li><a href="#main-page">home</a></li>
+                <li><a href="#watched-list">watched</a></li>
+                <li><a href="#top-list">top</a></li>
+              </ul>
+        </div>
+
+        <div id="main-page" class="section">
+            <h1 id="main-page-h1">Welcome to my anime world</h1>
+        </div>
+        
+        <div id="watched-list" class="section">
+            <div class="list">
+                <zero-md id="data" class="list-md anim" src="assets/Anime list.md">
+                    <template data-merge="prepend">
+                        <link rel="stylesheet" href="assets/styles-list1.css" />
+                    </template>
+                </zero-md>
+            </div>
+        </div>
+
+        <div id="top-list" class="section">
+            <div class="list-top">
+                <zero-md id="data" class="list-top-md anim" src="assets/Top-20 anime.md">
+                    <template data-merge="prepend">
+                        <link rel="stylesheet" href="assets/styles-list2.css" />
+                    </template>
+                </zero-md>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            let elems = document.querySelectorAll('.anim');
+            for (let elem of elems) {
+                elem.classList.remove('.animation')
+            }
+
+            var observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
+                        return;
+                    }
+
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animation');
+                    }
+                });
+            });
+
+            for (let elem of elems) {
+                console.log(elem);
+                observer.observe(elem);
+            }
+        })();
+    </script>
+</body>
+</html>
