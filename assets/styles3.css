@@ -134,7 +134,7 @@ body {
     font-size: 160px;
     font-weight: 900;
     padding: 0.5em 1em;
-    background: url('anime.png') no-repeat center/cover fixed;
+    background: url('anime.jpg') no-repeat center/cover fixed;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
