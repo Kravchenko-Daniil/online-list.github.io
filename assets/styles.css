@@ -169,15 +169,16 @@ body {
 }
 
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 480px) {
     .header {
-        top: 35px;
+        top: 15px;
         animation: showTopHeader980 1.5s;
+        opacity: .8;
     }
 
     #main-page h1 {
         font-size: 60px;
-
+        
     }
     
     @keyframes showTopHeader980 {
@@ -186,11 +187,21 @@ body {
             top:-25%;
         }
         to {
-            top:35px;
+            top:15px;
         }
     }
 
     #watched-list {
         height: auto;
+        padding-bottom: 65px;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    #main-page h1 {
+        font-size: 55px;
+        line-height: 100px;
+        /* letter-spacing: 5px; */
     }
 }

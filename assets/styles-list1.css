@@ -86,7 +86,7 @@
     }
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 480px) {
     .markdown-body ol {
         padding-left: 20px !important;
         padding: 20px 0;
@@ -94,14 +94,14 @@
 
     .markdown-body ol li {
         padding: 3px 10px;
-        font-size: 12px;
+        font-size: 11px;
         margin-right: 1px;
         font-weight: 500;
     }
 
-    .markdown-body li:last-child::before {
+    .markdown-body li:last-child:before {
         position: absolute;
         right: 15px;
-        bottom: 15px;
+        bottom: -9px;
     }
 }
