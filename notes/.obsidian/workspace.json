@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test note.md",
+                "file": "Anime list.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "test note.md",
+                "file": "Anime list.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "test note.md",
+                "file": "Anime list.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "test note.md"
+                "file": "Anime list.md"
               }
             }
           }
@@ -148,8 +148,8 @@
   },
   "active": "94d1d8dc762fbf67",
   "lastOpenFiles": [
-    "Top-20 anime.md",
     "test note.md",
+    "Top-20 anime.md",
     "Anime list.md"
   ]
 }
