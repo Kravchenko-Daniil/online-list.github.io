@@ -72,28 +72,41 @@
     margin-bottom: 15px;
     font-size: 20px;
     font-weight: 700;
+    transition: all 0.2s ease;
+    animation: lianim 1s;
+}
+
+@keyframes lianim {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(20deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-20deg); }
+    100% { transform: rotate(0deg); }
 }
 
 .markdown-body ol li::before {
     content: counter(num);
     position: absolute;
     left: 4%;
-    opacity: 0.8;
-    color:black;
+    opacity: 0.9;
+    color: black;
     font-family: 'Bungee Shade', cursive;
     font-weight: bold;
-    display: inline-block;
+}
+
+.markdown-body ol li:hover {
+    transition: all 0.2s ease;
+    transform: perspective(800px) translate3d(0px, 0px, 50px);
 }
 
 .markdown-body ol li::after {
     content: counter(num);
     position: absolute;
     right: 4%;
-    opacity: 0.8;
+    opacity: 0.9;
     color:black;
     font-family: 'Bungee Shade', cursive;
     font-weight: bold;
-    display: inline-block;
 }
 
 
