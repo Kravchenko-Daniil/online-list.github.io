@@ -25,26 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Anime list.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2a456edbd105a8e2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "these.md",
+                "file": "Top-20 anime.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +98,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "these.md",
+            "file": "Top-20 anime.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "these.md",
+            "file": "Top-20 anime.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -139,7 +127,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "these.md"
+            "file": "Top-20 anime.md"
           }
         }
       }
@@ -156,7 +144,7 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "2a456edbd105a8e2",
+  "active": "f2499760ef13c457",
   "lastOpenFiles": [
     "Anime list.md",
     "these.md",
